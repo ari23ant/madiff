@@ -1,0 +1,13 @@
+#--- ReVIEW-Template ---#
+ReVIEW-Template/node_modules/
+ReVIEW-Template/Gemfile.lock
+ReVIEW-Template/*.pdf
+ReVIEW-Template/.sass-cache/
+
+ReVIEW-Template/articles/*.pdf
+ReVIEW-Template/articles/*.epub
+ReVIEW-Template/articles/*.html
+# ReVIEW-Template/articles/*.md
+ReVIEW-Template/articles/*.xml
+ReVIEW-Template/articles/*.txt
+ReVIEW-Template/articles/_refiles/
