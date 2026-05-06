@@ -1,0 +1,16 @@
+version: '3.3'
+
+services:
+    madiff:
+        build: .
+        image: madiff-python
+        container_name: madiff-python
+        volumes:
+            - type: bind
+              source: ./src
+              target: /myapp/src
+            - /mnt/wslg:/mnt/wslg
+            - /tmp/.X11-unix:/tmp/.X11-unix
+        environment:
+            - DISPLAY=${DISPLAY}
+        tty: true
