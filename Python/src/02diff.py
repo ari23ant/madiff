@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# 2次関数
+# 二次関数
 dt = 0.1  # 刻み幅
 t = np.arange(-5, 5, dt)
 x = np.pow(t, 2)
