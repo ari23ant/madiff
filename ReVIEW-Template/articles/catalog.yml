@@ -5,9 +5,10 @@ CHAPS:
   - ma.re
   - diff.re
   - highpass.re
-  - rmbaseline.re
-  - rmbaseline_ma.re
-  - rmbaseline_diff.re
+  - rmbaseline_ma_diff.re
+    #  - rmbaseline.re
+    #  - rmbaseline_ma.re
+    #  - rmbaseline_diff.re
   - findpeak.re
   - ecgrr.re
 
