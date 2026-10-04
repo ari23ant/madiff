@@ -45,8 +45,8 @@ delay = int( (len(ma) - 1) / 2 )
 sin_hp = wave[delay:-delay] - wave_ma
 
 # 描画
-plt.plot(t, wave)
-plt.plot(t[delay:-delay], sin_hp)
+plt.plot(t, wave, color="gray")
+plt.plot(t[delay:-delay], sin_hp, color="black")
 plt.show()
 //}
 
@@ -119,8 +119,8 @@ wave = sin + baseline
 wave_diff = np.diff(wave) / (1.0/125)
 
 # 描画
-plt.plot(t, wave)
-plt.plot(t[1:], wave_diff)
+plt.plot(t, wave, color="gray")
+plt.plot(t[1:], wave_diff, color="black")
 plt.show()
 //}
 

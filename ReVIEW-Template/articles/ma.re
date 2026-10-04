@@ -65,8 +65,8 @@ wave_ma = np.convolve(wave, ma, 'valid')
 delay = int( (len(ma) - 1) / 2 )  # 遅延
 
 # 描画
-plt.plot(t, wave)
-plt.plot(t[delay:-delay], wave_ma)
+plt.plot(t, wave, color="gray")
+plt.plot(t[delay:-delay], wave_ma, color="black")
 plt.show()
 //}
 

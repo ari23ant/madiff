@@ -17,7 +17,7 @@ fs = 360  # Hz
 t = np.arange(ecg.size) / fs
 
 # 描画
-plt.plot(t, ecg)
+plt.plot(t, ecg, color="gray")
 plt.xlabel("Time [s]")
 plt.ylabel("ECG [mV]")
 plt.show()
@@ -42,7 +42,7 @@ ecg = ecg[(0*fs):(10*fs)]
 t = np.arange(0, 10, 1/fs)
 
 # 描画
-plt.plot(t, ecg)
+plt.plot(t, ecg, color="gray")
 plt.xlabel("Time [s]")
 plt.ylabel("ECG [mV]")
 plt.show()
@@ -77,8 +77,8 @@ delay = int( (len(ma) - 1) / 2 )
 ecg_hp = ecg[delay:-delay] - ecg_ma  # ハイパスフィルタ
 
 # 描画
-plt.plot(t, ecg)
-plt.plot(t[delay:-delay], ecg_hp)
+plt.plot(t, ecg, color="gray")
+plt.plot(t[delay:-delay], ecg_hp, color="black")
 plt.xlabel("Time [s]")
 plt.ylabel("ECG [mV]")
 plt.show()
@@ -114,8 +114,8 @@ ecg_hp_ma = np.convolve(ecg_hp, ma, 'valid')  # 移動平均フィルタ
 delay2 = int( (len(ma) - 1) / 2 ) + delay
 
 # 描画
-plt.plot(t[delay:-delay], ecg_hp)
-plt.plot(t[delay2:-delay2], ecg_hp_ma)
+plt.plot(t[delay:-delay], ecg_hp, color="gray")
+plt.plot(t[delay2:-delay2], ecg_hp_ma, color="black")
 plt.xlabel("Time [s]")
 plt.ylabel("ECG [mV]")
 plt.show()
@@ -158,8 +158,8 @@ for i in range(len(ecg_hp_ma_diff)-1):
         index.append(i+1)
 
 # 描画
-plt.plot(t[delay2:-delay2], ecg_hp_ma)
-plt.plot(t[delay2:-delay2][index], ecg_hp_ma[index], 'o')
+plt.plot(t[delay2:-delay2], ecg_hp_ma, color="gray")
+plt.plot(t[delay2:-delay2][index], ecg_hp_ma[index], 'o', color="black")
 plt.xlabel("Time [s]")
 plt.ylabel("ECG [mV]")
 plt.show()
@@ -203,8 +203,8 @@ for i in range(len(ecg_hp_ma_diff)-1):
             index.append(i+1)
 
 # 描画
-plt.plot(t[delay2:-delay2], ecg_hp_ma)
-plt.plot(t[delay2:-delay2][index], ecg_hp_ma[index], 'o')
+plt.plot(t[delay2:-delay2], ecg_hp_ma, color="gray")
+plt.plot(t[delay2:-delay2][index], ecg_hp_ma[index], 'o', color="black")
 plt.xlabel("Time [s]")
 plt.ylabel("ECG [mV]")
 plt.show()
@@ -251,8 +251,8 @@ HR = 60 * (len(index)/10)
 print(f'HR: {HR} [bpm]')
 
 # 描画
-plt.plot(t[delay2:-delay2], ecg_hp_ma)
-plt.plot(t[delay2:-delay2][index], ecg_hp_ma[index], 'o')
+plt.plot(t[delay2:-delay2], ecg_hp_ma, color="gray")
+plt.plot(t[delay2:-delay2][index], ecg_hp_ma[index], 'o', color="black")
 plt.xlabel("Time [s]")
 plt.ylabel("ECG [mV]")
 plt.show()

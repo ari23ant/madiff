@@ -55,8 +55,8 @@ for i in range(len(wave_diff)-1):
         index.append(i+1)
 
 # 描画
-plt.plot(t, wave)
-plt.plot(t[index], wave[index], 'o')
+plt.plot(t, wave, color="gray")
+plt.plot(t[index], wave[index], 'o', color="black")
 plt.show()
 //}
 

@@ -34,8 +34,8 @@ x = np.pow(t, 2)
 dxdt = np.diff(x) / dt
 
 # 描画
-plt.plot(t, x)
-plt.plot(t[1:], dxdt)
+plt.plot(t, x, color="gray")
+plt.plot(t[1:], dxdt, color="black")
 plt.xlim(-3, 3)  # x軸範囲を指定
 plt.ylim(-1, 5)  # y軸範囲を指定
 plt.show()

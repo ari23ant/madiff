@@ -35,8 +35,8 @@ delay = int( (len(ma) - 1) / 2 )
 noise_hp = wave[delay:-delay] - wave_ma
 
 # 描画
-plt.plot(t, wave)
-plt.plot(t[delay:-delay], noise_hp)
+plt.plot(t, wave, color="gray")
+plt.plot(t[delay:-delay], noise_hp, color="black")
 plt.show()
 //}
 
